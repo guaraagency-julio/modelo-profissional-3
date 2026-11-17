@@ -1,0 +1,19 @@
+/* O conteúdo deve ser legível mesmo quando JavaScript ou animações não carregam. */
+.reveal,
+.scroll-section:not(.reveal),
+.authority-strip .authority-grid > div,
+.scroll-section :is(.treatment-card,.value-grid>article,.process-line>article,.review-cards>blockquote,.instagram-grid>a,.location-card,.fit-grid>article,.table-row,.day-grid>article,.depth-list>div,.included-grid>article,.investment-grid>article,.faq-grid details,.service-list>article,.blog-grid>article,.contact-grid>article),
+.mentor-page .scroll-section :is(.mentor-heading,.immersion-copy,.evolution-grid>div:first-child,.depth-sticky,.mentor-profile-grid>div:last-child,.application-copy,.faq-grid>div:first-child,.immersion-image,.mentor-profile-image),
+.mentor-page .mentor-manifesto h2,
+.mentor-page .mentor-final h2 {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  clip-path: none;
+}
+.word-reveal[data-word-reveal="waiting"] > .word-reveal-segment { opacity: 1; transform: none; }
+/* A entrada parte de conteúdo visível e não é necessária para ler a página. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal.is-revealed { animation: modelo-reveal .55s ease-out both; }
+  @keyframes modelo-reveal { from { opacity: .72; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
